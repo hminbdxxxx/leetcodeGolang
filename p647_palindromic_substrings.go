@@ -1,7 +1,5 @@
 package leetcode_go
 
-import "fmt"
-
 func OcountSubstrings(s string) int {
 	isPalin := make([][]bool, len(s)+1)
 	for i := range isPalin {
@@ -11,7 +9,6 @@ func OcountSubstrings(s string) int {
 		}
 		isPalin[i] = arr
 	}
-	fmt.Println(isPalin)
 	res := 0
 	for i := 0; i < len(s); i++ {
 		for j := i; j >= 0; j-- {

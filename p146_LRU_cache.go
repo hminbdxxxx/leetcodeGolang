@@ -2,7 +2,6 @@ package leetcode_go
 
 import (
 	"container/list"
-	"fmt"
 )
 
 type kvNode struct {
@@ -21,7 +20,6 @@ func Constructor(capacity int) LRUCache {
 
 func (this *LRUCache) Get(key int) int {
 	elem, ok := this.m[key]
-	fmt.Println(this.m, this.ls)
 	if !ok {
 		return -1
 	}
@@ -30,7 +28,6 @@ func (this *LRUCache) Get(key int) int {
 }
 
 func (this *LRUCache) Put(key int, value int) {
-	fmt.Println(this.m, this.ls)
 	if elem, ok := this.m[key]; ok {
 		kv := elem.Value.(*kvNode)
 		kv.val = value
@@ -39,12 +36,10 @@ func (this *LRUCache) Put(key int, value int) {
 	}
 
 	if this.ls.Len() < this.cap {
-		fmt.Println("not full ins")
 		kv := kvNode{key, value}
 		elem := this.ls.PushFront(&kv)
 		this.m[key] = elem
 	} else {
-		fmt.Println("full ins")
 		tail := this.ls.Back()
 		this.ls.Remove(tail)
 		delete(this.m, tail.Value.(*kvNode).key)

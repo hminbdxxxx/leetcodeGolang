@@ -1,25 +1,15 @@
 package leetcode_go
 
-import (
-	"fmt"
-)
 
 func distanceK(root *TreeNode, target *TreeNode, K int) []int {
 	father := make(map[*TreeNode]*TreeNode)
 	helperP863(root, nil, father)
-	for k, v := range father {
-		fmt.Println(k.Val, v.Val)
-	}
 	res := []int{}
 	q := []*TreeNode{target}
 	visited := make(map[*TreeNode]bool)
 	visited[target] = true
 	step := 0
 	for len(q) != 0 {
-		for _, node := range q {
-			fmt.Printf("%d ", node.Val)
-		}
-		fmt.Println()
 		if step == K {
 			for _, node := range q {
 				res = append(res, node.Val)
