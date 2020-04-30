@@ -39,3 +39,10 @@ type Node struct {
 	Right *Node
 	Next  *Node
 }
+
+type NodeWithChild struct {
+	Val   int
+	Prev  *NodeWithChild
+	Next  *NodeWithChild
+	Child *NodeWithChild
+}

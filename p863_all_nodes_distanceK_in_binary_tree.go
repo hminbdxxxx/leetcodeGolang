@@ -1,6 +1,5 @@
 package leetcode_go
 
-
 func distanceK(root *TreeNode, target *TreeNode, K int) []int {
 	father := make(map[*TreeNode]*TreeNode)
 	helperP863(root, nil, father)
