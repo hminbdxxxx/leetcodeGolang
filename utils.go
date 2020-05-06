@@ -13,3 +13,11 @@ func min(a, b int) int {
 	}
 	return a
 }
+
+func sumInt(nums []int) int {
+	res := 0
+	for _, num := range nums {
+		res += num
+	}
+	return res
+}
