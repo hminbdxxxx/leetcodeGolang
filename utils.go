@@ -14,6 +14,14 @@ func min(a, b int) int {
 	return a
 }
 
+func makeNIntSlice(n int, l int) []int {
+	sli := make([]int, l)
+	for i := 0; i < l; i++ {
+		sli[i] = n
+	}
+	return sli
+}
+
 func sumInt(nums []int) int {
 	res := 0
 	for _, num := range nums {
