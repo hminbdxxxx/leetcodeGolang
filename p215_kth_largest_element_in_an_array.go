@@ -20,7 +20,7 @@ func pop(arr *[]int) int {
 }
 
 func heaptify(arr []int) {
-	for i := len(arr)/2-1; i >=0; i-- {
+	for i := len(arr)/2 - 1; i >= 0; i-- {
 		down(arr, i)
 	}
 }
@@ -28,7 +28,7 @@ func heaptify(arr []int) {
 func down(arr []int, i0 int) {
 	i := i0
 	for {
-		j1 := i * 2 + 1
+		j1 := i*2 + 1
 		if j1 >= len(arr) {
 			break
 		}

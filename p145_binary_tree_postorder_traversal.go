@@ -31,5 +31,5 @@ func postorderTraversal(root *TreeNode) []int {
 		}
 	}
 	return path
-    
+
 }
