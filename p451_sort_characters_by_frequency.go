@@ -17,7 +17,6 @@ func (a ByCnt) Len() int           { return len(a) }
 func (a ByCnt) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByCnt) Less(i, j int) bool { return a[i].c > a[j].c }
 
-
 func frequencySort(s string) string {
 	bs := []byte(s)
 	cnt := make(map[byte]int)

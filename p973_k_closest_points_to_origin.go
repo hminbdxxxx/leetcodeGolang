@@ -14,7 +14,7 @@ func (h PointHeap) Len() int {
 }
 
 func (h PointHeap) Less(i, j int) bool {
-	return math.Sqrt(float64(h[i][0]*h[i][0] + h[i][1]*h[i][1])) < math.Sqrt(float64(h[j][0]*h[j][0] + h[j][1]*h[j][1]))
+	return math.Sqrt(float64(h[i][0]*h[i][0]+h[i][1]*h[i][1])) < math.Sqrt(float64(h[j][0]*h[j][0]+h[j][1]*h[j][1]))
 }
 
 func (h PointHeap) Swap(i, j int) {
